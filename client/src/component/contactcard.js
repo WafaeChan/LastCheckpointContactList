@@ -16,7 +16,11 @@ class ContactCard extends Component {
           <button>Edit Contact</button>
         </Link>
 
-        <button onClick={() => deleteContact(this.props.mycontact._id)}>
+        <button
+          onClick={() => {
+            this.props.deleteContact(this.props.mycontact._id);
+          }}
+        >
           Delete Contact
         </button>
       </div>

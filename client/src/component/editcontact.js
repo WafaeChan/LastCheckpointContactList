@@ -24,6 +24,8 @@ class EditContact extends Component {
   }
 
   render() {
+    console.log(this.state);
+    console.log(this.props.match.params.id);
     return (
       <div>
         <input
@@ -43,11 +45,12 @@ class EditContact extends Component {
         ></input>
         <Link to={"/contacts"}>
           <button
-            onClick={() =>
+            onClick={() => {
+              console.log("emm");
               this.props.editContact(this.props.match.params.id, {
                 ...this.state
-              })
-            }
+              });
+            }}
           >
             Save Changes
           </button>

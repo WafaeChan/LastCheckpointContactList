@@ -14,9 +14,9 @@ export const addContact = newcontact => dispatch => {
     .catch(err => console.log(err));
 };
 
-export const editContact = (contact, id) => dispatch => {
+export const editContact = (id, contact) => dispatch => {
   axios
-    .put(`/contacts/updatecontact/${id}`)
+    .put(`/contacts/updatecontact/${id}`, contact)
     .then(res => dispatch(getContact()))
     .catch(err => console.log(err));
 };
